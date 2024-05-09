@@ -4,7 +4,7 @@
 
 :root {
   --bg-primary: #{colors.$bg-primary-light};
-  --bg-secondary: #{colors.$bg-secondary-light};
+  --bg-accent: #{colors.$bg-accent-light};
   --divider-primary: #{colors.$divider-primary-light};
   --accent-primary: #{colors.$accent-primary};
   --text-primary: #{colors.$text-primary};
@@ -13,9 +13,14 @@
 
 
 html, body { height: 100%; }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: var(--text-primary);
   @include text.body-2;
+}
+
+* {
+  box-sizing: border-box;
 }

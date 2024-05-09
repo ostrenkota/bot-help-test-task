@@ -3,7 +3,7 @@
 
 
 $bg-primary-light: mat.get-theme-color(theme.$theme, 'primary', 50);
-$bg-secondary-light: mat.get-theme-color(theme.$theme, 'accent', 200);
+$bg-accent-light: mat.get-theme-color(theme.$theme, 'accent', 50);
 
 $divider-primary-light: mat.get-theme-color(theme.$theme, 'primary', 400);
 $accent-primary: mat.get-theme-color(theme.$theme, 'accent', 500);

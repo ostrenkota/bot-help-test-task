@@ -1,7 +1,13 @@
 <aside class="aside">
   <div class="aside__tab-info tab-info">
-    <div class="tab-info__avatar"></div>
-    <span class="tab-info__name">Вкладка № 123</span>
+    <div
+      [ngStyle]="{ 'background-color': avatarColor }"
+      class="tab-info__avatar"></div>
+    <span class="tab-info__name">Вкладка № {{ tabId }}</span>
   </div>
-  <div class="aside__typing">Печатают:</div>
+  <ng-container *ngLet="typingList$ | async as typingList">
+    @if (typingList?.length) {
+      <div class="aside__typing">Печатают: {{ typingList.join(', ') }}</div>
+    }
+  </ng-container>
 </aside>

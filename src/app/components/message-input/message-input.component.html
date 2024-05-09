@@ -1,7 +1,7 @@
 <mat-form-field>
   <mat-label>Write a message...</mat-label>
-  <input matInput />
+  <input [formControl]="control" matInput />
 </mat-form-field>
-<button mat-icon-button>
+<button (click)="onSend()" [disabled]="!control.value" mat-icon-button>
   <mat-icon>send</mat-icon>
 </button>

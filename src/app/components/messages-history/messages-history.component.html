@@ -1,1 +1,26 @@
-<section class="messages"></section>
+<section class="messages" *ngLet="messages$ | async as messages">
+  @if (messages?.length) {
+    <virtual-scroller
+      #scroll
+      [items]="$any(messages)"
+      [enableUnequalChildrenSizes]="true">
+      <div *ngFor="let msg of scroll.viewPortItems" class="message">
+        <div
+          [ngStyle]="{ 'background-color': numberToColor(msg.sender) }"
+          class="message__avatar"></div>
+        <span class="message__author">{{ msg.sender }}:</span>
+        <span>{{ msg.text }}</span>
+      </div>
+    </virtual-scroller>
+
+    @if (messages && lastReadMessage && lastReadMessage < messages.length - 1) {
+      <button
+        class="messages__new-messages"
+        mat-flat-button
+        color="accent"
+        (click)="scrollToBottom()">
+        Новые сообщения ⬇
+      </button>
+    }
+  }
+</section>
