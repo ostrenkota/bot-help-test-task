@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
 @use 'typography' as text;
 @use 'theme' as theme;
+@use 'breakpoints' as b;
 
 .aside {
   padding: 1rem;
@@ -8,12 +9,30 @@
   background-color: var(--bg-primary);
   border-right: 1px solid var(--divider-primary);
 
+  @include b.mobile {
+    height: 124px;
+    border-bottom: 1px solid var(--divider-primary);
+    border-right: unset;
+  }
+
   &__tab-info {
     margin-bottom: 1.5rem;
+
+    @include b.mobile {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__typing {
     color: var(--text-secondary);
+
+    @include b.mobile {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 16px;
+      white-space: nowrap;
+      display: block;
+    }
   }
 }
 
@@ -33,3 +52,4 @@
     @include text.body-1;
   }
 }
+
