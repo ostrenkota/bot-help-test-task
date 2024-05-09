@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+
+$typography: mat.define-typography-config();
+
+@mixin body-1 {
+  @include mat.typography-level($typography, 'body-1')
+}
+
+@mixin body-2 {
+  @include mat.typography-level($typography, 'body-2')
+}
+
+@mixin headline-2 {
+  @include mat.typography-level($typography, 'headline-2')
+}

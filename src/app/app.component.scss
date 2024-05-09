@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.main {
+  height: 100%;
+  display: flex;
+
+  &__aside {
+    width: 400px;
+  }
+
+  &__chat {
+    flex: 1;
+  }
+}

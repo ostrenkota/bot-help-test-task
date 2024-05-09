@@ -1,0 +1,46 @@
+@use 'typography' as text;
+
+:host {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid var(--divider-primary);
+  padding-right: 1rem;
+}
+
+
+::ng-deep {
+  mat-form-field {
+    flex: 1;
+  }
+
+  .mdc-text-field {
+    background-color: transparent !important;
+
+    &:hover {
+      background-color: transparent !important;
+    }
+
+    * {
+      background-color: transparent !important;
+    }
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+
+  input {
+    font-size: 20px !important;
+    color: var(--text-secondary);
+  }
+}
+
+button {
+  align-self: center;
+
+  color: var(--accent-primary);
+}

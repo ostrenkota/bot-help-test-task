@@ -1,0 +1,21 @@
+@use 'theme';
+@use 'colors';
+@use 'typography' as text;
+
+:root {
+  --bg-primary: #{colors.$bg-primary-light};
+  --bg-secondary: #{colors.$bg-secondary-light};
+  --divider-primary: #{colors.$divider-primary-light};
+  --accent-primary: #{colors.$accent-primary};
+  --text-primary: #{colors.$text-primary};
+  --text-secondary: #{colors.$text-secondary};
+}
+
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--text-primary);
+  @include text.body-2;
+}

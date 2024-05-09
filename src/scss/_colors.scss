@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+@use 'theme' as theme;
+
+
+$bg-primary-light: mat.get-theme-color(theme.$theme, 'primary', 50);
+$bg-secondary-light: mat.get-theme-color(theme.$theme, 'accent', 200);
+
+$divider-primary-light: mat.get-theme-color(theme.$theme, 'primary', 400);
+$accent-primary: mat.get-theme-color(theme.$theme, 'accent', 500);
+
+$text-primary: mat.get-theme-color(theme.$theme, 'primary', 900);
+$text-secondary: mat.get-theme-color(theme.$theme, 'primary', 600);

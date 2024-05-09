@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+@use 'typography' as text;
+@use 'theme' as theme;
+
+.aside {
+  padding: 1rem;
+  height: 100%;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--divider-primary);
+
+  &__tab-info {
+    margin-bottom: 1.5rem;
+  }
+
+  &__typing {
+    color: var(--text-secondary);
+  }
+}
+
+.tab-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+
+  &__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background-color: red;
+  }
+
+  &__name {
+    @include text.body-1;
+  }
+}
